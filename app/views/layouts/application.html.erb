@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyApp</title>
+  <%#= stylesheet_link_tag    "application", :media => "all" %>
+  <%#= javascript_include_tag "application" %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag "coffeshop.min.css"%>
+  <%= stylesheet_link_tag "jquery.mobile.structure-1.3.1.min.css"%>
+  <%= javascript_include_tag "application" %>
+
+   <script type="text/javascript">   
+       $(document).bind("mobileinit", function () {
+             $.mobile.ajaxEnabled = false;
+           });
+   </script>
+  <%= javascript_include_tag "jquery.mobile-1.3.1.min.js"%>
+  <%= stylesheet_link_tag "main"%>
+  <%= javascript_include_tag "main"%>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div data-role="page" data-theme="b">
+    <div data-role="header" data-position="inline">
+      <h1>Hotel</h1>
+    </div>
+       <%= yield %>
+  </div>
+</body>
+</html>
+

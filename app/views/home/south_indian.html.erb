@@ -1,0 +1,27 @@
+<div data-role="collapsible">
+   <h2> Veg Items</h2>
+   <p>
+   	<%@south_indian_veg_items.each do |item|%>
+   	  <div data-role="collapsible">
+   	  	<h2> <%= item.name%></h2>
+       
+       <p><%= item.price%></p>
+      </div>
+    <%end%>
+   </p>
+</div>
+<div data-role="collapsible">
+   <h2> Non_Veg Items</h2>
+   <p>
+   	 <div>
+   	  <%@south_indian_non_veg_items.each do |item|%>
+	    <div data-role="collapsible">
+   	  	<h2> <%= item.name%></h2>
+       
+         <p><%= item.price%></p>
+        </div>
+	  <%end%>
+    </div>
+   </p>
+</div>
+

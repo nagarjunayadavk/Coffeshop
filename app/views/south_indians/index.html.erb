@@ -1,0 +1,25 @@
+<h1>Listing south_indians</h1>
+
+<table>
+  <tr>
+    <th>Item name</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @south_indians.each do |south_indian| %>
+  <tr>
+    <td><%= south_indian.item_name %></td>
+    <td><%= south_indian.price %></td>
+    <td><%= link_to 'Show', south_indian %></td>
+    <td><%= link_to 'Edit', edit_south_indian_path(south_indian) %></td>
+    <td><%= link_to 'Destroy', south_indian, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New South indian', new_south_indian_path %>
